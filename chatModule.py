@@ -1,7 +1,7 @@
 class ChatModule:
     def askInChat(self, page, text):
         page.get_by_placeholder("Ask Ema anything...").click()
-        page.get_by_placeholder("Ask Ema anything...").fill("Hey, Ema!")
+        page.get_by_placeholder("Ask Ema anything...").fill(text)
         page.locator("div:nth-child(5) > .w-4\\/6 > div:nth-child(3)").click()
         page.wait_for_timeout(10000)
         
